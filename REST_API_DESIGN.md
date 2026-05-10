@@ -10,7 +10,7 @@ The goal is not to implement the API yet, but to define a clear design that can 
 
 The first slice of the platform should focus on four main actors:
 
-| Actor | Main Need |
+| Actor | responsibility |
 |---|---|
 | Merchant | Register with Imara, request credit, and send or receive money |
 | Field Agent | Onboard merchants and help verify merchant details |
@@ -196,8 +196,7 @@ Important checks:
 ### Separating Financing Requests and Disbursements
 
 I chose to keep `FinancingRequest` and `Disbursement` as separate resources. Approval and money movement are related, but they are not the same event. A request can be approved before funds are actually sent, and a payment can fail or be reversed.
-
-The benefit is better tracking and a clearer audit trail. The trade-off is that developers may need to fetch more than one resource to see the full financing lifecycle. This is reasonable because financial systems need careful tracking more than they need everything stored in one object.
+becouse a financial request happen when merchant asks for mony & disbursement means money was sent to them ,I chose to separate them becouse approvals doesn't always says  that money wwas moved so keeping them help the system to track each step clearly with every detail the dawnside of this approach is that devs will ned to check records bu for finance its worth it
 
 ### Using PATCH for Status Changes
 
