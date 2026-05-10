@@ -10,7 +10,7 @@ The goal is not to implement the API yet, but to define a clear design that can 
 
 The first slice of the platform should focus on four main actors:
 
-| Actor | Main Need |
+| Actor | responsibility |
 |---|---|
 | Merchant | Register with Imara, request credit, and send or receive money |
 | Field Agent | Onboard merchants and help verify merchant details |
