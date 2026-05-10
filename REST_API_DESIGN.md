@@ -205,6 +205,18 @@ I chose `PATCH` for updates such as merchant verification, financing review, and
 
 The trade-off is that status transitions need careful validation. The API must prevent impossible workflows, such as moving a rejected request directly to disbursed. This is still reasonable because controlled status changes make the API safer and easier to test.
 
+
+### Keeping Remittance Transactions Separate
+
+I chose to keep remittance transactions separate from merchant profiles.
+
+A merchant profile stores information about the business, like name, phone number, country, and verification status. A remittance transaction stores money movement, like amount, currency, receiver, and payment status.
+
+The good side is that the merchant record stays clean and easy to understand. Each money transfer can be tracked on its own.
+
+The trade-off is that if someone wants to see both the merchant details and all their transactions, the system may need to look in more than one place.
+
+
 ## Final Reflection
 
 <!-- Write this section yourself before submitting.
