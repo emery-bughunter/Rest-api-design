@@ -232,22 +232,11 @@ If this API moved into implementation next week, I would improve it by adding mo
 
 AI tool used: GPT-5.5 through ChatGPT/Codex.
 
-<<<<<<< HEAD
-## AI usage ## : 
-I used GPT-5.5 to brainstorm possible REST resource boundaries, compare endpoint naming options, and think through trade-offs in financial API design, such as whether financing requests and disbursements should be separate resources.
-
-## ideas kept 
- I kept the idea of separating merchants, financing requests, disbursements, lending partners, field agents, and remittance transactions. I also kept the idea of using consistent JSON error responses and HTTP status codes for validation, missing resources, duplicate data, and business-rule violations.
-
-## changes
- I reduced the amount of detail, removed extra endpoint examples, and kept only the parts that matched the first version of the Imara platform. I also rejected making the design too implementation-focused because the assignment is only asking for a blueprint.
-=======
 1.I used GPT-5.5 to brainstorm and better understand the assignment goals, especially how the Imara business context could be translated into REST resources, endpoints, validation rules, and trade-off decisions.
 
 I kept the idea of organizing the design around merchants, field agents, financing requests, lending partners, disbursements, and remittance transactions. I also kept the idea of using consistent error responses.
 
  I shortened the design, selected the core resources I thought fit the first version of the platform, and kept the document focused on a blueprint instead of implementation code.
->>>>>>> 73eebb887dd514b645ac01e41d4ed01e08915559
 
 ## reflection to  my own judgment
 
