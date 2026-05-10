@@ -220,13 +220,13 @@ The trade-off is that if someone wants to see both the merchant details and all 
 
 ## Final Reflection
 
-The hardest part of this design was deciding how to separate the main resources. At first, it seemed easier to put many things under the merchant record, but that would make the design messy as the platform grows. I decided that merchants, financing requests, disbursements, and remittance transactions should be separate because they each represent a different part of the business process.
+the challenging  part of this design approach  was deciding how to separate the main resources. At first, it seemed easier to put many things under the merchant record, but that would make the design messy as the platform grows. I decided that merchants, financing requests, disbursements, and remittance transactions should be separate because they each represent a different part of the business process.
 
-I am most confident about the financing request and disbursement design. A financing request shows that a merchant has asked for money, while a disbursement shows that the money has actually been sent. Keeping these separate makes the system easier to track, especially if a request is approved but the payment fails or is delayed.
+the financing request and disbursement design. A financing request shows that a merchant has asked for money, while a disbursement shows that the money has actually been sent. Keeping these separate makes the system easier to track, especially if a request is approved but the payment fails or is delayed.
 
 Validation was also an important part of the design. Since Imara is a financial platform, the API should not accept unclear or risky data. For example, amounts should be greater than zero, phone numbers should not be duplicated, and suspended merchants should not be able to request new financing.
 
-If this API moved into implementation next week, I would improve it by adding more details about authentication, user roles, and security. Different users should have different permissions, because a merchant, field agent, lending partner, and operations team member should not all be allowed to do the same actions.
+If this API moved into implementation, the next steps involves adding more details about authentication, user roles, and security. Different users should have different permissions, because a merchant, field agent, lending partner, and operations team member should not all be allowed to do the same actions.
 
 ## AI Use Appendix
 
