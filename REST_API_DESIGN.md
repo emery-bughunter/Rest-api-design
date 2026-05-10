@@ -231,10 +231,15 @@ Possible points to focus on:
 
 AI tool used: GPT-5.5 through ChatGPT/Codex.
 
-What I asked it to help with: I used GPT-5.5 to brainstorm and better understand the assignment goals, especially how the Imara business context could be translated into REST resources, endpoints, validation rules, and trade-off decisions.
+## AI usage ## : 
+I used GPT-5.5 to brainstorm possible REST resource boundaries, compare endpoint naming options, and think through trade-offs in financial API design, such as whether financing requests and disbursements should be separate resources.
 
-Ideas I kept: I kept the idea of organizing the design around merchants, field agents, financing requests, lending partners, disbursements, and remittance transactions. I also kept the idea of using consistent error responses.
+## ideas kept 
+ I kept the idea of separating merchants, financing requests, disbursements, lending partners, field agents, and remittance transactions. I also kept the idea of using consistent JSON error responses and HTTP status codes for validation, missing resources, duplicate data, and business-rule violations.
 
-Ideas I changed or rejected: I shortened the design, selected the core resources I thought fit the first version of the platform, and kept the document focused on a blueprint instead of implementation code.
+## changes
+ I reduced the amount of detail, removed extra endpoint examples, and kept only the parts that matched the first version of the Imara platform. I also rejected making the design too implementation-focused because the assignment is only asking for a blueprint.
 
-Why the final design reflects my own judgment: GPT-5.5 helped me brainstorm and clarify the project requirements, but I reviewed the assignment brief and made the final choices about the resources, business rules, endpoint examples, and trade-offs included in this document.
+## reflection to  my own judgment
+
+ I made the final decisions about which resources belonged in the first API version, which business rules were most important, and which trade-offs were reasonable for a financial services platform.
