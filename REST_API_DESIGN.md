@@ -218,23 +218,24 @@ The trade-off is that if someone wants to see both the merchant details and all 
 
 ## Final Reflection
 
-<!-- Write this section yourself before submitting.
+## Final Reflection
 
-Possible points to focus on:
-- Which resource was hardest for you to design and why?
-- Why does a financial API need strict validation?
-- Why did you separate credit requests, disbursements, and remittance transactions?
-- What would you improve if this design became a real implementation next week?
--->
+The hardest part of this design was deciding how to separate the main resources. At first, it seemed easier to put many things under the merchant record, but that would make the design messy as the platform grows. I decided that merchants, financing requests, disbursements, and remittance transactions should be separate because they each represent a different part of the business process.
+
+I am most confident about the financing request and disbursement design. A financing request shows that a merchant has asked for money, while a disbursement shows that the money has actually been sent. Keeping these separate makes the system easier to track, especially if a request is approved but the payment fails or is delayed.
+
+Validation was also an important part of the design. Since Imara is a financial platform, the API should not accept unclear or risky data. For example, amounts should be greater than zero, phone numbers should not be duplicated, and suspended merchants should not be able to request new financing.
+
+If this API moved into implementation next week, I would improve it by adding more details about authentication, user roles, and security. Different users should have different permissions, because a merchant, field agent, lending partner, and operations team member should not all be allowed to do the same actions.
 
 ## AI Use Appendix
 
 AI tool used: GPT-5.5 through ChatGPT/Codex.
 
-What I asked it to help with: I used GPT-5.5 to brainstorm and better understand the assignment goals, especially how the Imara business context could be translated into REST resources, endpoints, validation rules, and trade-off decisions.
+1.I used GPT-5.5 to brainstorm and better understand the assignment goals, especially how the Imara business context could be translated into REST resources, endpoints, validation rules, and trade-off decisions.
 
-Ideas I kept: I kept the idea of organizing the design around merchants, field agents, financing requests, lending partners, disbursements, and remittance transactions. I also kept the idea of using consistent error responses.
+I kept the idea of organizing the design around merchants, field agents, financing requests, lending partners, disbursements, and remittance transactions. I also kept the idea of using consistent error responses.
 
-Ideas I changed or rejected: I shortened the design, selected the core resources I thought fit the first version of the platform, and kept the document focused on a blueprint instead of implementation code.
+ I shortened the design, selected the core resources I thought fit the first version of the platform, and kept the document focused on a blueprint instead of implementation code.
 
 Why the final design reflects my own judgment: GPT-5.5 helped me brainstorm and clarify the project requirements, but I reviewed the assignment brief and made the final choices about the resources, business rules, endpoint examples, and trade-offs included in this document.
